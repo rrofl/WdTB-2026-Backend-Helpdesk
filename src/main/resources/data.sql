@@ -10,3 +10,5 @@ insert into user_account (email, display_name, role, created_at) values
     ('s403807@student.merito.pl', 'Krzysztof', 'USER', current_timestamp);
 insert into user_account (email, display_name, role, created_at) values
     ('s697600@student.merito.pl', 'Artur', 'USER', current_timestamp);
+insert into user_account (email, display_name, role, created_at) values
+    ('john@student.merito.pl', 'John', 'USER', current_timestamp);
