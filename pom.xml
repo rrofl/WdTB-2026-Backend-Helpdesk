@@ -13,7 +13,7 @@
     <groupId>pl.wsb.helpdesk</groupId>
     <artifactId>wdtb-2026-backend-helpdesk</artifactId>
     <version>1.0.0-113022-113321</version>
-    <name>WdTB-2026-Backend</name>
+    <name>WdTB-2026-Backend-Helpdesk</name>
     <description>Projekt zespołowy z przedmiotu Wprowadzenie do technologii backendowych (WdTB)</description>
 
     <properties>
