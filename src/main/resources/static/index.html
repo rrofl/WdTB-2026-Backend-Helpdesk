@@ -56,6 +56,11 @@
     <h3>Zmiany w projekcie</h3>
     <ul>
       <li><b>LAB 01:</b> Nazwa projektu, konta zespołu, wizytówka</li>
+      <li><b>LAB 02:</b> Encje i dane startowe: <code>categories</code>, <code>tickets</code>, <code>ticket_comments</code> (enum <code>TicketStatus</code>, klasa wbudowana <code>DeviceDetails</code>)</li>
+      <li><b>LAB 03:</b> Relacje i skończony schemat: nowe tabele <code>device</code>, <code>technicians</code>, <code>ticket_assignments</code>;
+          <code>Ticket → Category</code> i przydziały (<code>@ManyToOne</code>), <code>Technician → UserAccount</code> i <code>Device → Ticket</code> (<code>@OneToOne</code>),
+          listy komentarzy i przydziałów (<code>@OneToMany</code>), wiele-do-wielu zgłoszenie ↔ serwisant przez encję łączącą,
+          repozytoria <code>TicketRepository</code> i <code>TicketAssignmentRepository</code> oraz diagram w <code>SCHEMAT.md</code></li>
     </ul>
     <p class="muted">Na kolejnych laboratoriach dopisujcie tu kolejne punkty.</p>
   </section>
