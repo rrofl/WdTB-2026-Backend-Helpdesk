@@ -28,7 +28,7 @@ insert into tickets (title, description, status, created_at, asset_tag, operatin
     ('Problem z uruchomieniem środowiska Docker na laptopie', 'Demon Dockera nie startuje automatycznie po zalogowaniu, pojawia się błąd uprawnień grupy.', 'CLOSED', '2026-10-19 09:00:00', 'NB-DEV-0012', 'Fedora Linux 41');
 
 -- ===== LAB 02 · ticket_comments =====
-insert into ticket_comments (content, author_name, is_internal, created_at, ticket_id) values
+insert into ticket_comments (content, author_name, is_internal, created_at, ticket) values
     ('Zweryfikowałem logi na koncentratorze VPN - certyfikat użytkownika wygasł. Generuję nowy klucz.', 'Artur (IT Support)', true, '2026-10-20 09:00:00', 1),
     ('Przesłałem nową paczkę konfiguracyjną na maila. Proszę o sprawdzenie czy połączenie ruszyło.', 'Artur (IT Support)', false, '2026-10-20 09:15:00', 2),
     ('Zamówiłem nową stację dokującą z magazynu do podmiany na jutro rano.', 'Krzysztof (Helpdesk)', true, '2026-10-21 11:30:00', 3),

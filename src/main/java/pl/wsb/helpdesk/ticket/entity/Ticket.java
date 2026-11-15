@@ -31,7 +31,7 @@ public class Ticket {
     @Embedded
     private DeviceDetails deviceDetails;
 
-    @OneToMany(mappedBy = "ticket_id")
+    @OneToMany(mappedBy = "ticket")
     private List<TicketComment> comments = new ArrayList<>();
 
     protected Ticket(){

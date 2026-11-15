@@ -9,7 +9,7 @@ public class Device {
     private String serial_number;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "device_details_id")
+    @JoinColumn(name = "device_details")
     private DeviceDetails deviceDetails;
 
     protected Device() {

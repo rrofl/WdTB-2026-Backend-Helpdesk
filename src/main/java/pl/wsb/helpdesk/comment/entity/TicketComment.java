@@ -27,7 +27,7 @@ public class TicketComment {
     private LocalDateTime createdAt;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "ticket_id", nullable = false)
+    @JoinColumn(name = "comments", nullable = false)
     private Ticket ticket;
 
     protected TicketComment() {
