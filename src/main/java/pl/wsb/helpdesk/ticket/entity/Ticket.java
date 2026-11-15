@@ -1,6 +1,8 @@
 package pl.wsb.helpdesk.ticket.entity;
 
 import jakarta.persistence.*;
+import pl.wsb.helpdesk.assignment.entity.TicketAssignment;
+import pl.wsb.helpdesk.category.entity.Category;
 import pl.wsb.helpdesk.comment.entity.TicketComment;
 
 import java.time.LocalDateTime;
@@ -31,18 +33,27 @@ public class Ticket {
     @Embedded
     private DeviceDetails deviceDetails;
 
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "category_id", nullable = false)
+    private Category category;
+
     @OneToMany(mappedBy = "ticket")
     private List<TicketComment> comments = new ArrayList<>();
+
+    @OneToMany(mappedBy = "ticket")
+    private List<TicketAssignment> assignments = new ArrayList<>();
 
     protected Ticket(){
     }
 
-    public Ticket(String title, String description, TicketStatus status, LocalDateTime createdAt, DeviceDetails deviceDetails) {
+    public Ticket(String title, String description, TicketStatus status, LocalDateTime createdAt,
+                  DeviceDetails deviceDetails, Category category) {
         this.title = title;
         this.description = description;
         this.status = status;
         this.createdAt = createdAt;
         this.deviceDetails = deviceDetails;
+        this.category = category;
     }
 
     public Long getId() {
@@ -69,7 +80,15 @@ public class Ticket {
         return deviceDetails;
     }
 
+    public Category getCategory() {
+        return category;
+    }
+
     public List<TicketComment> getComments() {
         return comments;
+    }
+
+    public List<TicketAssignment> getAssignments() {
+        return assignments;
     }
 }
