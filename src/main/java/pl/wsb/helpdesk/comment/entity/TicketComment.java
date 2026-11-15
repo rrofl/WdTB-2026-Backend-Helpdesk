@@ -1,6 +1,8 @@
 package pl.wsb.helpdesk.comment.entity;
 
 import jakarta.persistence.*;
+import pl.wsb.helpdesk.ticket.entity.Ticket;
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -23,6 +25,10 @@ public class TicketComment {
 
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "ticket_id", nullable = false)
+    private Ticket ticket;
 
     protected TicketComment() {
     }
@@ -52,5 +58,9 @@ public class TicketComment {
 
     public LocalDateTime getCreatedAt() {
         return createdAt;
+    }
+
+    public Ticket getTicket() {
+        return ticket;
     }
 }

@@ -1,7 +1,11 @@
 package pl.wsb.helpdesk.ticket.entity;
 
 import jakarta.persistence.*;
+import pl.wsb.helpdesk.comment.entity.TicketComment;
+
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "tickets")
@@ -26,6 +30,9 @@ public class Ticket {
 
     @Embedded
     private DeviceDetails deviceDetails;
+
+    @OneToMany(mappedBy = "ticket_id")
+    private List<TicketComment> comments = new ArrayList<>();
 
     protected Ticket(){
     }
@@ -60,5 +67,9 @@ public class Ticket {
 
     public DeviceDetails getDeviceDetails() {
         return deviceDetails;
+    }
+
+    public List<TicketComment> getComments() {
+        return comments;
     }
 }

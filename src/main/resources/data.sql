@@ -11,7 +11,7 @@ insert into user_account (email, display_name, role, created_at) values
 insert into user_account (email, display_name, role, created_at) values
     ('s697600@student.merito.pl', 'Artur', 'USER', current_timestamp);
 insert into user_account (email, display_name, role, created_at) values
-    ('john@student.merito.pl', 'John', 'USER', current_timestamp);
+    ('s791235@student.merito.pl', 'Karim', 'USER', current_timestamp);
 
 -- ===== LAB 02 · categories =====
 insert into categories (name, description, sla_hours, is_active) values
@@ -28,8 +28,16 @@ insert into tickets (title, description, status, created_at, asset_tag, operatin
     ('Problem z uruchomieniem środowiska Docker na laptopie', 'Demon Dockera nie startuje automatycznie po zalogowaniu, pojawia się błąd uprawnień grupy.', 'CLOSED', '2026-10-19 09:00:00', 'NB-DEV-0012', 'Fedora Linux 41');
 
 -- ===== LAB 02 · ticket_comments =====
-insert into ticket_comments (content, author_name, is_internal, created_at) values
-    ('Zweryfikowałem logi na koncentratorze VPN - certyfikat użytkownika wygasł. Generuję nowy klucz.', 'Artur (IT Support)', true, '2026-10-20 09:00:00'),
-    ('Przesłałem nową paczkę konfiguracyjną na maila. Proszę o sprawdzenie czy połączenie ruszyło.', 'Artur (IT Support)', false, '2026-10-20 09:15:00'),
-    ('Zamówiłem nową stację dokującą z magazynu do podmiany na jutro rano.', 'Krzysztof (Helpdesk)', true, '2026-10-21 11:30:00'),
-    ('Uprawnienia w grupie AD zostały nadane. Zmiany zadziałają po ponownym zalogowaniu do stacji.', 'Krzysztof (Admin)', false, '2026-10-22 14:25:00');
+insert into ticket_comments (content, author_name, is_internal, created_at, ticket_id) values
+    ('Zweryfikowałem logi na koncentratorze VPN - certyfikat użytkownika wygasł. Generuję nowy klucz.', 'Artur (IT Support)', true, '2026-10-20 09:00:00', 1),
+    ('Przesłałem nową paczkę konfiguracyjną na maila. Proszę o sprawdzenie czy połączenie ruszyło.', 'Artur (IT Support)', false, '2026-10-20 09:15:00', 2),
+    ('Zamówiłem nową stację dokującą z magazynu do podmiany na jutro rano.', 'Krzysztof (Helpdesk)', true, '2026-10-21 11:30:00', 3),
+    ('Uprawnienia w grupie AD zostały nadane. Zmiany zadziałają po ponownym zalogowaniu do stacji.', 'Krzysztof (Admin)', false, '2026-10-22 14:25:00', 4);
+
+-- ===== LAB 03 · device =====
+insert into device (serial_number, device_details_id) values
+    ("12233" ,1),
+    ("2334" ,2),
+    ("576654" ,3),
+    ("7686" ,4)
+

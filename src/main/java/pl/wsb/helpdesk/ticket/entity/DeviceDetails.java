@@ -1,7 +1,6 @@
 package pl.wsb.helpdesk.ticket.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Embeddable;
+import jakarta.persistence.*;
 
 @Embeddable
 public class DeviceDetails {
