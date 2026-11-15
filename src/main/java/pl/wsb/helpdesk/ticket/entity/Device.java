@@ -2,8 +2,12 @@ package pl.wsb.helpdesk.ticket.entity;
 
 import jakarta.persistence.*;
 
-@Table
+@Entity
 public class Device {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
     @Column(name="serial_number", length = 50)
     private String serial_number;

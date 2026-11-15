@@ -36,8 +36,8 @@ insert into ticket_comments (content, author_name, is_internal, created_at, tick
 
 -- ===== LAB 03 · device =====
 insert into device (serial_number, device_details_id) values
-    ("12233" ,1),
-    ("2334" ,2),
-    ("576654" ,3),
-    ("7686" ,4)
+    ('12233' ,1),
+    ('2334' ,2),    
+    ('576654' ,3),
+    ('7686' ,4)
 
