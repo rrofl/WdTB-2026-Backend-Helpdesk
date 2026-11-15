@@ -35,9 +35,9 @@ insert into ticket_comments (content, author_name, is_internal, created_at, tick
     ('Uprawnienia w grupie AD zostały nadane. Zmiany zadziałają po ponownym zalogowaniu do stacji.', 'Krzysztof (Admin)', false, '2026-10-22 14:25:00', 4);
 
 -- ===== LAB 03 · device =====
-insert into device (serial_number, device_details_id) values
-    ('12233' ,1),
-    ('2334' ,2),    
-    ('576654' ,3),
-    ('7686' ,4)
+insert into device (serial_number, model, device_type, warranty_until, ticket_id) values
+    ('SN-WRO-0142', 'HP EliteDesk 800 G9',     'DESKTOP', '2028-05-15', 1),
+    ('SN-WRO-0089', 'Dell Latitude 5540',      'LAPTOP',  '2027-11-30', 2),
+    ('SN-WRO-0311', 'Lenovo ThinkCentre M70q', 'DESKTOP', '2027-03-20', 3),
+    ('SN-DEV-0012', 'Lenovo ThinkPad T14',     'LAPTOP',  null,         4);
 
